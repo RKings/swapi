@@ -1,0 +1,88 @@
+@mixin name-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 800;
+  color: $swatch-white;
+
+  @include tablet-and-up {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+@mixin emoji {
+  font-size: 40px;
+  text-align: center;
+
+  @include tablet {
+    font-size: 60px;
+  }
+
+  @include desktop {
+    font-size: 80px;
+  }
+}
+
+@mixin header($size: big) {
+  font-family: 'Montserrat', sans-serif;
+  color: $swatch-white;
+  text-align: center;
+
+  @if $size == small {
+    font-size: 20px;
+    font-weight: 400;
+
+    @include tablet {
+      font-size: 35px;
+    }
+
+    @include desktop {
+      font-size: 40px;
+    }
+  }
+
+  @if $size == big {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 40px;
+
+    @include tablet {
+      font-size: 67px;
+    }
+
+    @include desktop {
+      font-size: 75px;
+    }
+  }
+}
+
+@mixin title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 75px;
+  font-weight: 700;
+  color: $swatch-white;
+
+  @include tablet {
+
+  }
+
+  @include desktop {
+
+  }
+}
+
+@mixin body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: $swatch-white;
+
+  @include tablet {
+
+  }
+
+  @include desktop {
+
+  }
+}

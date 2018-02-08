@@ -1,0 +1,46 @@
+.loader {
+  pointer-events: none;
+  position: relative;
+  height: 70px;
+  margin: 0 auto;
+  width: 70px;
+  transition: opacity .3s cubic-bezier(0.20, 0, 0, 1);
+
+  &::before {
+    animation: rotate 1.2s infinite cubic-bezier(0.20, 0, 0, 1);
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid transparent;
+    border-radius: 100%;
+    border-right: 3px solid transparent;
+    border-top: 3px solid $swatch-white;
+    content: '';
+    display: block;
+    height: 64px;
+    position: absolute;
+    width: 64px;
+  }
+
+  &--hide {
+    opacity: 0;
+  }
+}
+
+.loader__image {
+  background: url('./../images/svg/yoda.svg') center no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

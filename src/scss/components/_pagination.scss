@@ -1,0 +1,40 @@
+.pagination {
+    width: 100%;
+    margin: 10px 10px;
+}
+
+.pagination__previous-page,
+.pagination__next-page {
+  @include body;
+  font-weight: 700;
+  text-decoration: none;
+
+  &--disabled {
+    display: none;
+  }
+}
+
+.pagination__next-page {
+  float: right;
+}
+
+.pagination__arrow{
+  display: inline-block;
+  float: right;
+  height: 0;
+  width: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+
+  &--right {
+    float: right;
+    border-left: 15px solid $swatch-white;
+    margin-left: 10px;
+  }
+
+  &--left {
+    float: left;
+    border-right: 15px solid $swatch-white;
+    margin-right: 10px;
+  }
+}

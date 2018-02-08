@@ -1,0 +1,22 @@
+.header {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header__title {
+  padding: 50px 0;
+
+  @include tablet {
+    padding: 75px 0;
+  }
+}
+
+.header__title-big-rule {
+  @include header($size: big);
+  display: block;
+}
+
+.header__title-small-rule {
+  @include header($size: small);
+  display: block;
+}
